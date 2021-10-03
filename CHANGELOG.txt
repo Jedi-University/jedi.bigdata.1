@@ -1,4 +1,7 @@
 AIRFLOW 1.8.0, 2017-03-12
+
+test from 03/10/2021
+
 -------------------------
 
 [AIRFLOW-900] Double trigger should not kill original task instance
