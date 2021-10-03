@@ -33,6 +33,8 @@ git commit -m "Add airflow"
 * Вносим в ветку `v1-8-stable` изменения и делаем коммит
 
 ```bash
+git checkout v1-8-stable
+vim ... # вносим изменения в файлы
 git add -A
 git commit -m "WIP: Testing working with git"
 ```
