@@ -55,7 +55,8 @@ git rebase -i 9831f410~
 vim ... # решаем конфликты
 git add -A
 git rebase --continue
-git push -f origin fix
+git pull
+git push origin fix
 ```
 
 * Создаем файл со списком команд и коммитим его в `main`
