@@ -30,7 +30,7 @@ git add -A
 git commit -m "Add airflow"
 ```
 
-* Вносим в ветку `v1-8-stable` изменения и делаем коммит
+* Вносим в ветку `v1-8-stable` изменения и делаем коммит (Upd.)
 
 ```bash
 git checkout v1-8-stable
@@ -39,13 +39,23 @@ git add -A
 git commit -m "WIP: Testing working with git"
 ```
 
-* Создаем еще одну ветку и удаляем из нее коммиты
+> переносим коммит `"WIP: Testing working with git"` на ветку `main`
 
 ```bash
 git checkout main
+git cherry-pick v1-8-stable
+```
+
+* Создаем еще одну ветку и удаляем из нее коммиты (Upd.)
+
+```bash
 git checkout -b fix
 git log
-git revert ca97ca75
+git rebase -i 9831f410~
+vim ... # решаем конфликты
+git add -A
+git rebase --continue
+git push -f origin fix
 ```
 
 * Создаем файл со списком команд и коммитим его в `main`
