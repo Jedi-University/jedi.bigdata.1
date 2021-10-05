@@ -55,7 +55,10 @@ git rebase -i 9831f410~
 vim ... # решаем конфликты
 git add -A
 git rebase --continue
-git pull
+git merge be5e4362 # мержимся к Initial commit 
+vim ... # снова решаем конфликты
+git add -A
+git commit -m "Merge fix to Initial commit"
 git push origin fix
 ```
 
