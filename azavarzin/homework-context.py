@@ -6,8 +6,12 @@
 from functools import reduce
 
 
+def func(a="a", b="b", c="c"):
+    return lambda x: [x + a, x + b, x + c]
+
+
 def task_1():
-    f = lambda s: [s + "a", s + "b", s + "c"]
+    f = func()
     print(f("x"))
 
 
