@@ -6,13 +6,8 @@
 from functools import reduce
 
 
-def func(a="a", b="b", c="c"):
+def func(a, b, c):
     return lambda x: [x + a, x + b, x + c]
-
-
-def task_1():
-    f = func()
-    print(f("x"))
 
 
 # 2. дан лист листов
@@ -23,11 +18,14 @@ def task_1():
 
 # def task_2(l):
 #     return reduce(lambda a, b: a + b, l)
-task_2 = lambda l: reduce(lambda a, b: a + b, l)
+join_list_of_lists_into_list = lambda l: reduce(lambda a, b: a + b, l)
 
 
 if __name__ == "__main__":
-    task_1()
+    # task 1
+    f = func("a", "b", "c")
+    print(f("x"))
 
+    # task 2
     l = [[1, 2, 3, 4, 5, 6], [0, 0, 0, 0], ["a", "b", "c"]]
-    print(task_2(l))
+    print(join_list_of_lists_into_list(l))
