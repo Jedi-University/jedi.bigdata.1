@@ -1,7 +1,7 @@
 import time
 
 
-def calc_exec_time(min):
+def calc_exec_time(min=False):
     def _calc_exec_time(function):
         def wrap(*args, **kwargs):
             print(f"Function name: {function.__name__}")
@@ -15,7 +15,7 @@ def calc_exec_time(min):
     return _calc_exec_time
 
 
-@calc_exec_time(min=False)
+@calc_exec_time()
 def a(x, y):
     print(f"{x} - {y}")
 
