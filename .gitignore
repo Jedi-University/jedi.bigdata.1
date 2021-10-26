@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 .idea
 *.db
-azavarzin/homework-top-repos/secrets.py
+azavarzin/hw-top-repos/secrets.py
