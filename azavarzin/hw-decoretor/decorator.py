@@ -35,6 +35,7 @@ def fibonacci(n):
     while n > 0:
         fib1, fib2 = fib2, fib1 + fib2
         n -= 1
+    return fib2
 
 
 if __name__ == '__main__':
