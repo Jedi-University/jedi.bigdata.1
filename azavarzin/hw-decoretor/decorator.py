@@ -3,15 +3,16 @@ import time
 
 def calc_exec_time(min=False):
     def _calc_exec_time(function):
-        def wrap(*args, **kwargs):
+        def wrapper(*args, **kwargs):
             print(f"Function name: {function.__name__}")
             start = time.time()
-            function(*args, **kwargs)
+            res = function(*args, **kwargs)
             end = time.time()
             total = (end - start) / 60 if min else end - start
             units_of_time = "min." if min else "sec."
             print(f"Function execution time: {total} {units_of_time}\n")
-        return wrap
+            return res
+        return wrapper
     return _calc_exec_time
 
 
@@ -34,10 +35,12 @@ def fibonacci(n):
     while n > 0:
         fib1, fib2 = fib2, fib1 + fib2
         n -= 1
-    print(f"{fib2}")
 
 
 if __name__ == '__main__':
     a(10, 10)
     sequence_square(1000)
-    fibonacci(3999999)
+
+    number = 3999999
+    fibonacci_number = fibonacci(3999999)
+    print(f"the {number} fibonacci number is {fibonacci_number}")
